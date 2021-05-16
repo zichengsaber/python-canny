@@ -2,11 +2,17 @@
 > 计算机85 张子诚
 ### 展示
 **原图**
+
 ![](img/16068.jpg)
+
 ![](img/3096.jpg)
+
 **Canny之后**
+
 ![](result/canny-16068.jpg)
+
 ![](result/canny-3096.jpg)
+
 ### Canny 算法的基本流程
 
 * 计算经过高斯平滑后的梯度
@@ -59,9 +65,10 @@ def findDerivatives(I_gray):
 * x方向梯度图
   ![](test/Ix(1).png)
 * y方向梯度图
-* ![](test/Iy(1).png)
+  ![](test/Iy(1).png)
 * 梯度强度图
   ![](test/Im(1).png)
+
   ![](test/Im(2).png)
 
 
@@ -144,6 +151,7 @@ def nonMaxSup(Mag,grad_Ori):
     return suppressed
 ```
 NMS 结果可视化
+
 ![](test/nms.png)
 
 **边缘连接**
@@ -199,8 +207,10 @@ def edgeLink(M, Mag, edge_Ori):
 最后运行并和opencv中的canny比较
 
 **my-canny**
+
 ![](test/canny(1).png)
 
 **opencv-canny**
+
 ![](test/Canny-opencv.png)
 
