@@ -44,11 +44,17 @@ def nonMaxSup(Mag,grad_Ori):
                     suppressed[i,j]=0
     """
     查看中间结果
-    
+    """
     plt.figure()
     plt.imshow(np.uint8(suppressed))
     plt.set_cmap('gray')
     plt.colorbar()
-    plt.savefig("./test/nms.png")     
-    """
+    plt.savefig("./test/nms.png") 
+    plt.figure()
+    plt.imshow(np.uint8(suppressed*Mag))
+    plt.set_cmap('gray')
+    plt.colorbar()
+    plt.savefig("./test/nms(1).png") 
+        
+    
     return suppressed

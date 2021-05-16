@@ -21,19 +21,13 @@ def cannyEdge(I):
     return E
     
  
-
+# test 
 
 if __name__ =="__main__":
-    img_names=os.listdir('./img')
+    img=cv.imread("./img/3096.jpg")
+    edge=cannyEdge(img) 
 
-    print(img_names)
-    for name in img_names:
-        path=os.path.join('img',name)
-        img=cv.imread(path)
-        edge=cannyEdge(img)
-        img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-        # 对比
-        cv.imwrite("./result/canny-{}".format(name),edge)
+   
         
     
     
