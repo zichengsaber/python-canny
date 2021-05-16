@@ -30,7 +30,7 @@ def choose(Mag,grad_Ori,i,j):
         grad2=Mag[i+1,j]
     elif grad_Ori[i,j] in [135,-45]:
         grad1=Mag[i-1,j-1]
-        grad2=Mag[i+1,j+1] #
+        grad2=Mag[i+1,j+1] 
     return grad1,grad2
 
 

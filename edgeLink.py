@@ -7,14 +7,16 @@ def choose(x,y,edge_Ori):
         return (x,y-1,x,y+1)
     elif edge_Ori[x,y] in [45,-135]:
         return (x-1,y+1,x+1,y-1)
+        # return (x-1,y-1,x+1,y+1)
     elif edge_Ori[x,y] in [90,-90]:
         return (x-1,y,x+1,y)
     elif edge_Ori[x,y] in [135,-45]:
         return (x-1,y-1,x+1,y+1)
+        # return (x-1,y-1,x+1,y+1)
 
 def edgeLink(M, Mag, edge_Ori):
     thresh_high=0.1*Mag.max()
-    thresh_low=0.02*Mag.max()
+    thresh_low=0.0175*Mag.max()
 
     # 记录下梯度强度
     NMS=Mag*M 
