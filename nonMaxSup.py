@@ -47,7 +47,7 @@ def nonMaxSup(Mag,grad_Ori):
                 suppressed[i,j]=0
             else:
                 grad1,grad2=choose(Mag,grad_Ori,i,j)
-                if grad1<Mag[i,j] and grad2<Mag[i,j]:
+                if grad1<=Mag[i,j] and grad2<=Mag[i,j]:
                     suppressed[i,j]=1
                 else:
                     suppressed[i,j]=0
