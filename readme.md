@@ -62,11 +62,17 @@ def findDerivatives(I_gray):
     return Mag,Magx,Magy,Ori_g,Ori_e
 ```
 梯度结果可视化
+
 * x方向梯度图
-  ![](test/Ix(1).png)
+
+![](test/Ix(1).png)
+
 * y方向梯度图
-  ![](test/Iy(1).png)
+
+![](test/Iy(1).png)
+
 * 梯度强度图
+
   ![](test/Im(1).png)
 
   ![](test/Im(2).png)
