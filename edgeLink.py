@@ -1,6 +1,7 @@
 import numpy as np 
 
 # high point edge Ori
+# 目前就是这个方向十分需要思考
 def choose(x,y,edge_Ori):
     if edge_Ori[x,y] in [0,180,-180]:
         return (x,y-1,x,y+1)

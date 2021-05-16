@@ -8,7 +8,16 @@ import numpy as np
     - Input Ori: H x W matrix represents the orientation of derivatives
     - Output M: H x W binary matrix represents the edge map after non-maximum suppression
 '''
+"""
+(i-1,j-1),(i-1,j),(i-1,j+1)
+(i,j-1),(i,j),(i,j+1)
+(i+1,j-1),(i+1,j),(i+1,j+1)
 
+|--->
+|
+v
+
+"""
 def choose(Mag,grad_Ori,i,j):
     if grad_Ori[i,j] in [0,180,-180]:
         grad1=Mag[i,j+1]

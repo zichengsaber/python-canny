@@ -20,8 +20,16 @@ def findDerivatives(I_gray):
 
     # kernel for x and y gradient
     # Sobel 卷积算子
-    dx = np.float32([[-1.0, 0.0, 1.0], [-2.0, 0.0, 2.0], [-1.0, 0.0, 1.0]])
-    dy = np.float32([[1.0, 2.0, 1.0], [0.0, 0.0, 0.0], [-1.0, -2.0, -1.0]])
+    dx = np.float32([
+      [-1.0, 0.0, 1.0], 
+      [-2.0, 0.0, 2.0], 
+      [-1.0, 0.0, 1.0]
+    ])
+    dy = np.float32([
+      [1.0, 2.0, 1.0], 
+      [0.0, 0.0, 0.0], 
+      [-1.0, -2.0, -1.0]
+    ])
     
     ###############################################################################
     # Your code here: calculate the gradient magnitude and orientation

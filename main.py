@@ -11,5 +11,7 @@ if __name__ =="__main__":
         img=cv.imread(path)
         edge=cannyEdge(img)
         img=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
-        # 对比
+        # 对比opencv
         cv.imwrite("./result/canny-{}".format(name),edge)
+        # 
+        cv.imwrite("./result/canny-opencv-{}".format(name),cv.Canny(img,100,200))
