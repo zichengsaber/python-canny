@@ -111,7 +111,7 @@ def get_discrete_orientation(Ori_g,Ori_e):
 
     get_edge_angle_vect = np.vectorize(get_edge_angle)
     # 离散化的边缘方向
-    discrete_edge_orientation = get_edge_angle_vect(np.absolute(angle_Ori_e))
+    discrete_edge_orientation = get_edge_angle_vect(angle_Ori_e)
     
 
     return discrete_gradient_orientation, discrete_edge_orientation
@@ -184,7 +184,7 @@ def choose(x,y,edge_Ori):
 
 def edgeLink(M, Mag, edge_Ori):
     thresh_high=0.1*Mag.max()
-    thresh_low=0.02*Mag.max()
+    thresh_low=0.0175*Mag.max()
 
     # 记录下梯度强度
     NMS=Mag*M 
